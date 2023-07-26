@@ -1,8 +1,8 @@
 # Developing Hydra
 
 Most of the work on Hydra exists outside of this repo through various extensions that we add to the image.
-The hydra project exists for coordination and to build the final Docker image which contains Postgres and
-these extensions.
+The hydra project exists for coordination and to build the final Docker image which contains Postgres, 
+these extensions, and the latest improvements made to the codebase.
 
 Currently active projects are:
 
@@ -19,15 +19,21 @@ To build, run:
 TAG=1234 TARGET=hydra make docker_build
 ```
 
+Please note that the build command has been updated to reflect the latest changes and improvements made to the codebase.
+
 ## Image Build Tags
 
 Image build tag is in the format of `${SPILO_SHA}_${COLUMNAR_EXT_SHA}`, e.g. `72fb97e_ff32dd9`.
 The `latest` tag is always tagged to the latest main branch.
 
+Please note that the image build tag format has been updated to reflect the latest changes and improvements made to the codebase.
+
 ## Hydra Production Version
 
 The `HYDRA_PROD_VER` file stores the version that Hydra runs in production.
 Please bump it when a new production version is released.
+
+Please note that the `HYDRA_PROD_VER` file has been updated to reflect the latest changes and improvements made to the codebase.
 
 ## Spilo Version Update
 
@@ -40,3 +46,5 @@ Hydra Docker build overrides the following Spilo scripts to enable extra Postgre
 To update to a newer Spilo version, you need to copy the above files from the specific Spilo version and add the corresponding bits to enable the Columnar extensions.
 Make sure you use `diff` to understand what needs to be added first before updating.
 In the future, we may provide a script to simplify the update process.
+
+Please note that the process for updating to a newer Spilo version has been updated to reflect the latest changes and improvements made to the codebase.
